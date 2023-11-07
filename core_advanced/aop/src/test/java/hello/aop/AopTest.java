@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Import;
 
 import hello.aop.order.OrderRepository;
 import hello.aop.order.OrderService;
-import hello.aop.order.aop.AspectV5Order;
+import hello.aop.order.aop.AspectV6Advice;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -19,7 +19,8 @@ import lombok.extern.slf4j.Slf4j;
 // @Import(AspectV2.class)
 // @Import(AspectV3.class)
 // @Import(AspectV4Pointcut.class)
-@Import({AspectV5Order.TransactionAspect.class, AspectV5Order.LogAspect.class})
+// @Import({AspectV5Order.TransactionAspect.class, AspectV5Order.LogAspect.class})
+@Import(AspectV6Advice.class)
 class AopTest {
 
 	@Autowired
